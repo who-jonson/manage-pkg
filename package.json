@@ -1,6 +1,6 @@
 {
   "name": "@whoj/manage-pkg",
-  "version": "0.1.1-beta.2",
+  "version": "0.1.0",
   "description": "Install & Uninstall package programmatically.",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
