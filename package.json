@@ -1,6 +1,6 @@
 {
   "name": "@whoj/manage-pkg",
-  "version": "0.1.0",
+  "version": "0.1.1-beta.1",
   "description": "Install & Uninstall package programmatically.",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -26,7 +26,12 @@
     "type": "git",
     "url": "git+https://github.com/who-jonson/manage-pkg.git"
   },
-  "keywords": ["npm", "pnpm", "yarn", "universal"],
+  "keywords": [
+    "npm",
+    "pnpm",
+    "yarn",
+    "universal"
+  ],
   "files": [
     "dist"
   ],
@@ -34,7 +39,7 @@
     "build": "tsup",
     "prepublishOnly": "pnpm build",
     "dev": "pnpm build --watch",
-    "start": "esno src/test.ts",
+    "start": "esno src/index.ts",
     "release": "bumpp --commit --push --tag && pnpm publish",
     "lint": "eslint \"{**/*,*}.{js,ts}\"",
     "lint:fix": "pnpm lint --fix"
@@ -53,6 +58,7 @@
     "execa": "^5.1.1"
   },
   "publishConfig": {
-    "registry": ""
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   }
 }
