@@ -1,6 +1,6 @@
 {
   "name": "@whoj/manage-pkg",
-  "version": "0.1.1-beta.1",
+  "version": "0.1.1-beta.2",
   "description": "Install & Uninstall package programmatically.",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -40,7 +40,7 @@
     "prepublishOnly": "pnpm build",
     "dev": "pnpm build --watch",
     "start": "esno src/index.ts",
-    "release": "bumpp --commit --push --tag && pnpm publish",
+    "release": "bumpp --commit --push --tag",
     "lint": "eslint \"{**/*,*}.{js,ts}\"",
     "lint:fix": "pnpm lint --fix"
   },
