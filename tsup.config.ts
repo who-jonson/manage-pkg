@@ -24,7 +24,6 @@ export default defineConfig({
   splitting: false,
   tsconfig: './tsconfig.lib.json',
   esbuildOptions(options) {
-    options.conditions = ['dev'];
     options.metafile = true;
   }
 });
