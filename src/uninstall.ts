@@ -3,7 +3,7 @@
  */
 
 import { execa } from 'execa';
-import type { Options } from '.';
+import type { Options } from './types';
 
 export async function uninstallPackage(names: string | string[], options: Options = {}) {
   if (!Array.isArray(names)) {

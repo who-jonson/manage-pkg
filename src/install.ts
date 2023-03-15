@@ -3,8 +3,8 @@
  */
 
 import { execa } from 'execa';
-import type { Options } from '.';
-import { checkPackageStatus } from '.';
+import type { Options } from './types';
+import { checkPackageStatus } from './check';
 
 function mapAsync<T, U>(array: T[], callbackFn: (value: T, index: number, array: T[]) => Promise<U>): Promise<U[]> {
   return Promise.all(array.map(callbackFn));

@@ -5,10 +5,4 @@
 export * from './check';
 export * from './install';
 export * from './uninstall';
-
-export interface Options {
-  cwd?: string;
-  dev?: boolean;
-  silent?: boolean;
-  additionalArgs?: string[];
-}
+export * from './types';

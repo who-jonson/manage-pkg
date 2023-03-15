@@ -4,7 +4,7 @@
 
 import { execaSync } from 'execa';
 import { detect } from '@antfu/ni';
-import type { Options } from '.';
+import type { Options } from './types';
 
 export async function detectAgent(cwd: string = process.cwd()) {
   return await detect({ autoInstall: true, cwd }) || 'npm';

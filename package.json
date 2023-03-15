@@ -5,9 +5,11 @@
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
+      "browser": "./dist/index.esm.js",
       "import": "./dist/index.mjs",
       "require": "./dist/index.js"
     },
+    "./package.json": "./package.json",
     "./*": [
       "./dist/*",
       "./dist/*.d.ts"
