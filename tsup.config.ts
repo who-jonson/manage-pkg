@@ -2,19 +2,29 @@
  * Copyright (c) 2022. Jonson B. <https://github.com/who-jonson>
  */
 
-import type { Options } from 'tsup';
+import { defineConfig } from 'tsup';
 
-export default <Options>{
+export default defineConfig({
   name: 'manage-pkg',
   banner: {
     js: '/* \n * Copyright (c) 2022. Jonson B. <https://github.com/who-jonson> \n */'
   },
   clean: true,
-  dts: true,
+  dts: {
+    compilerOptions: {
+      composite: false,
+      moduleResolution: 'bundler'
+    }
+  },
   entry: [
     './src/index.ts'
   ],
   format: ['cjs', 'esm'],
-  platform: 'node',
-  splitting: false
-};
+  target: 'node14',
+  splitting: false,
+  tsconfig: './tsconfig.lib.json',
+  esbuildOptions(options) {
+    options.conditions = ['dev'];
+    options.metafile = true;
+  }
+});

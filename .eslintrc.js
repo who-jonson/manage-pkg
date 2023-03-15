@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ['@antfu'],
+  extends: ['@whoj'],
   rules: {
     '@typescript-eslint/comma-dangle': [2, 'never'],
     '@typescript-eslint/semi': ['error', 'always'],

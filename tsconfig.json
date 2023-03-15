@@ -1,11 +1,17 @@
 {
   "compilerOptions": {
-    "target": "es2017",
-    "module": "esnext",
-    "lib": ["esnext"],
-    "moduleResolution": "node",
+    "target": "ES2021",
+    "module": "ESNext",
+    "lib": ["ES2021"],
     "esModuleInterop": true,
+    "allowJs": true,
     "strict": true,
+    "outDir": "dist",
+    "baseUrl": ".",
+    "moduleResolution": "Bundler",
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
     "strictNullChecks": true,
     "resolveJsonModule": true,
     "skipDefaultLibCheck": true

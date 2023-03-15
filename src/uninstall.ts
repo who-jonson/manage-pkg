@@ -2,15 +2,17 @@
  * Copyright (c) 2022. Jonson B. <https://github.com/who-jonson>
  */
 
-import execa from 'execa';
+import { execa } from 'execa';
 import type { Options } from '.';
 
 export async function uninstallPackage(names: string | string[], options: Options = {}) {
-  if (!Array.isArray(names))
+  if (!Array.isArray(names)) {
     names = [names];
+  }
 
-  if (!names.length)
+  if (!names.length) {
     return Promise.resolve();
+  }
 
   const args = options.additionalArgs || [];
 

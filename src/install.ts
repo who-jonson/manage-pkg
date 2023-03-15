@@ -2,7 +2,7 @@
  * Copyright (c) 2022. Jonson B. <https://github.com/who-jonson>
  */
 
-import execa from 'execa';
+import { execa } from 'execa';
 import type { Options } from '.';
 import { checkPackageStatus } from '.';
 
@@ -16,14 +16,16 @@ async function filterAsync<T>(array: T[], callbackFn: (value: T, index: number, 
 }
 
 export async function installPackage(names: string | string[], options: Options = {}) {
-  if (!Array.isArray(names))
+  if (!Array.isArray(names)) {
     names = [names];
+  }
 
   const nNames = await filterAsync(names, async n => !(await checkPackageStatus(n)));
 
   if (!nNames.length) {
-    if (!options.silent)
+    if (!options.silent) {
       console.log('Nothing to install');
+    }
     return Promise.resolve();
   }
 

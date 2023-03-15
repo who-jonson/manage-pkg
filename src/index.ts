@@ -7,8 +7,8 @@ export * from './install';
 export * from './uninstall';
 
 export interface Options {
-  cwd?: string
-  dev?: boolean
-  silent?: boolean
-  additionalArgs?: string[]
+  cwd?: string;
+  dev?: boolean;
+  silent?: boolean;
+  additionalArgs?: string[];
 }
