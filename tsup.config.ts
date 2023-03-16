@@ -28,7 +28,7 @@ export default defineConfig({
     ...Object.keys(dependencies)
   ],
   format: ['cjs', 'esm'],
-  target: 'node14',
+  target: 'node16',
   splitting: false,
   metafile: true,
   tsconfig: './tsconfig.lib.json',
